@@ -52,6 +52,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.supports_background_blur=1
 endif
 
+# SEPolicy
+$(call inherit-product, vendor/statix/sepolicy/sepolicy.mk)
+
 # Make some features conditional
 ifeq ($(ENABLE_GAMETOOLS), true)
 PRODUCT_COPY_FILES += \
@@ -95,6 +98,10 @@ include vendor/statix/config/bootanimation.mk
 
 # Fonts
 include vendor/statix/config/fonts.mk
+
+# HIDL
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+     vendor/statix/target/config/statix_vendor_framework_compatibility_matrix.xml
 
 # Overlays
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/statix/overlay

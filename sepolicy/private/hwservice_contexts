@@ -1,0 +1,2 @@
+# Power
+vendor.statix.power::IPowerFeature                                     u:object_r:hal_power_hwservice:s0
