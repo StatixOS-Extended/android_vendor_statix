@@ -1,5 +1,6 @@
 SOONG_CONFIG_NAMESPACES += statixGlobalVars
 SOONG_CONFIG_statixGlobalVars += \
+    needs_camera_boottime \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
     target_health_charging_control_charging_path \
@@ -44,6 +45,7 @@ TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 
 # Soong value variables
+SOONG_CONFIG_statixGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
 SOONG_CONFIG_statixGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
 SOONG_CONFIG_statixGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_OFFSET)
 SOONG_CONFIG_statixGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
