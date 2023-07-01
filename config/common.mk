@@ -91,7 +91,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 include vendor/statix/config/packages.mk
 
 # Branding
-include vendor/statix/config/branding.mk
+$(call inherit-product, vendor/statix/target/product/version.mk)
 
 # Bootanimation
 include vendor/statix/config/bootanimation.mk
